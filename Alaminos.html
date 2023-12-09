@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alaminos City Tour Package</title>
+  <style>
+    header {
+      position: relative;
+      text-align: center;
+    }
+
+    .full-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      opacity: 0.7;
+      border-radius: 0px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-overlay {
+      position: absolute;
+      width: 100%;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 50px;
+      box-sizing: border-box;
+      color: white;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      border-radius: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .itinerary-section {
+      background-color: #e2f3e2;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .image-overlay h1 {
+      font-size: 48px;
+      color: green;
+      text-shadow:
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    }
+
+    .itinerary-title {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #4caf50;
+    }
+
+    .itinerary-item {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: left;
+      padding: 20px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-now-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 24px;
+      text-decoration: none;
+      background-color: #4caf50;
+      color: white;
+      text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+    }
+
+    .book-now-button:hover {
+      background-color: #45a049;
+    }
+
+    .explanation ul {
+      text-align: left;
+      margin-left: 20px;
+    }
+
+    .image-overlay h1 {
+      font-size: 48px;
+    }
+    
+    .explanation strong {
+      font-size: 30px;
+    }
+
+    .explanation ul li {
+      font-size: 25px;
+    }
+
+    .itinerary-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+    .itinerary-img {
+      width: 400px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .itinerary-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.itinerary-item.reverse {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.itinerary-item.enchanted-cave {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <img class="full-image" src="https://media-cdn.tripadvisor.com/media/photo-c/1280x250/0c/48/b6/a9/oh-that-view.jpg" alt="Full Image">
+    <div class="image-overlay">
+      <h1>Alaminos City Tour Package</h1>
+      <div class="explanation">
+        <strong>Places to visit in Alaminos:</strong>
+        <ul>
+          <li>
+            <strong>Hundred Islands National Park:</strong> Explore this natural wonder and enjoy island hopping, snorkeling, and swimming in the crystal-clear waters.
+          </li>
+          <li>
+            <strong>Minor Basilica of Our Lady of the Rosary of Manaoag:</strong> Visit this beautiful basilica and experience its religious and historical significance.
+          </li>
+          <li>
+            <strong>Cabongaoan Beach and Death Pool:</strong> Relax on the pristine beach and witness the unique Death Pool phenomenon, a natural pool with healing properties.
+          </li>
+          <li>
+            <strong>Tayug Sunflower Eco Park:</strong> Immerse yourself in the vibrant beauty of sunflower fields and enjoy various outdoor activities in the eco park.
+          </li>
+          <li>
+            <strong>Enchanted Cave:</strong> Discover the enchanting beauty of this cave and take a refreshing dip in its cool waters.
+          </li>
+        </ul>
+      </div>
+      <a class="book-now-button" href="#">Book Now</a>
+    </div>
+  </header>
+
+  <section class="itinerary-section">
+    <h2 class="itinerary-title">Itinerary</h2>
+    <div class="itinerary-item">
+        <img class="itinerary-img" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/24/02/0f/caption.jpg?w=300&h=300&s=1" alt="Hundred Islands National Park">
+        <div>
+          <h3>Hundred Islands National Park</h3>
+          <p>Enjoy island hopping, snorkeling, and swimming in the crystal-clear waters of Hundred Islands National Park.</p>
+        </div>
+      </div>
+      
+      <div class="itinerary-item reverse">
+        <img class="itinerary-img" src="https://www.ourpangasinan.com/wp-content/uploads/2023/02/our-lady-of-manaog-church.jpg" alt="Minor Basilica of Our Lady of the Rosary of Manaoag">
+        <div>
+          <h3>Minor Basilica of Our Lady of the Rosary of Manaoag</h3>
+          <p>Visit the beautiful Minor Basilica of Our Lady of the Rosary of Manaoag and experience its religious and historical significance.</p>
+        </div>
+      </div>
+      
+      <div class="itinerary-item">
+        <img class="itinerary-img" src="https://ilovepangasinan.com/wp-content/uploads/2018/04/Death-pool-in-Burgos-Pangasinan5.jpg" alt="Cabongaoan Beach and Death Pool">
+        <div>
+          <h3>Cabongaoan Beach and Death Pool</h3>
+          <p>Relax on the pristine beach and witness the unique Death Pool phenomenon, a natural pool with healing properties.</p>
+        </div>
+      </div>
+      
+      <div class="itinerary-item reverse">
+        <img class="itinerary-img" src="https://gttp.imgix.net/307307/x/0/top-10-beautiful-flower-farms-and-gardens-in-the-philippines-8.jpg?auto=compress%2Cformat&ch=Width%2CDPR&dpr=1&ixlib=php-3.3.0&w=883" alt="Tayug Sunflower Eco Park">
+        <div>
+          <h3>Tayug Sunflower Eco Park</h3>
+          <p>Immerse yourself in the vibrant beauty of sunflower fields and enjoy various outdoor activities in the eco park.</p>
+        </div>
+      </div>
+      
+      <div class="itinerary-item enchanted-cave">
+        <img class="itinerary-img" src="https://seepangasinan.com/wp-content/uploads/2022/06/enchanted1.png" alt="Enchanted Cave">
+        <div>
+          <h3>Enchanted Cave</h3>
+          <p>Discover the enchanting beauty of this cave and take a refreshing dip in its cool waters.</p>
+        </div>
+      </div>
+  </section>
+</body>
+</html>
