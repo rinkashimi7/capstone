@@ -756,6 +756,21 @@ padding:18px 0;
                 text-align: center;
                 color:rgb(66, 153, 104);
                 }
+
+
+/****transaction****/
+
+.sub-header_15{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #007bff66;
+    
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color:rgb(66, 153, 104);
+    }
 /******FAQ******/
 
 .FAQ{
