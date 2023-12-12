@@ -30,10 +30,16 @@
       <option value="vigan">Vigan Heritage Voyage</option>
       <option value="alaminos">Alaminos Adventure Tour</option>
     </select>
-   <label for="numPassengers">Number of Travelers (Max: 10) <span>*</span></label>
-    <input type="number" id="numPassengers" name="numPassengers" min="1" max="10" required>
+   
+    <label for="numAdultTravelers">Number of Adult Travelers <span>*</span></label>
+    <input type="number" id="numAdultTravelers" name="numAdultTravelers" min="1" max="20" required>
 
+    <label for="numKidsTravelers">Number of Kids Travelers <span>*</span></label>
+    <input type="number" id="numKidsTravelers" name="numKidsTravelers" min="0" max="20" required>
+
+    
     <label for="phoneNumber">Cellphone Number (Philippines) <span>*</span></label>
+
     <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{11}" placeholder="e.g., 09123456789" required>
 
     <label for="travelDate">Select Travel Date <span>*</span></label>
@@ -42,11 +48,44 @@
     <label for="travelTime">Select Travel Time <span>*</span></label>
     <input type="time" id="travelTime" name="travelTime" required>
 
-    <label for="pickupLocation">Pick-up Location</label>
-    <p>#65 2nd Floor Decibar Building,Lower Bonifacio, Baguio City, Philippines (Infront of Caltex Bonifacio)</p>
+
+    <label for="car">Choose a Vehicle <span>*</span></label>
+    <select id="car" name="car" required> 
+      <option value="alaminos">CBSTC Suggested Vehicle</option>
+      <option value="baguio">Toyota Innova</option>
+      <option value="sagada">Toyota Vios</option>
+      <option value="vigan">Toyota Hiace</option>
+      <option value="alaminos">Toyota Fortuner</option>
+      <option value="alaminos">CBSTC Modern Bus</option>
+     
+    </select>
 
 
+
+
+    <label for="pickupLocation"><B>Pick-up Location</B></label>
+   
+    <label for="homeAddress">Home Address <span>*</span></label>
+    <input type="text" id="homeAddress" name="homeAddress" required>
+
+    <label for="barangay">Barangay <span>*</span></label>
+    <input type="barangay" name="barangay" required>
+
+
+   
+    <label for="City">City <span>*</span></label>
+    <select id="City" name="city" required>
+      
+      <option value="city">Baguio City</option>
+    </select>
+
+ <label for="landmark">Landmark<span>*</span></label>
+    <input type="text" id="landmark" name="landmark" required>
  
+
+
+
+
 
     <button type="submit" class="reservation">Submit Reservation</button>
 </form>
@@ -54,8 +93,8 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient( #10835d95, #EFF3F8);
-      height: 170vh;
+    background-image: linear-gradient(rgba(74, 113, 165, 0.179),rgba(19, 96, 100, 0.201)),url(IMAGES/WALLPAPER.png);
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -78,9 +117,9 @@
     }
 
     form {
-      background-color: rgba(33, 117, 76, 0.488);
+      background-color: rgba(33, 117, 76, 0.922);
       padding: 40px;
-      
+      color: white;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 100%;

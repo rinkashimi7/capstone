@@ -20,7 +20,7 @@ include 'connection.php';
 
 <body>
     
-    
+ 
         <section class="header">
             <nav>
                 <!-- logo nav/ size adjust--> 
@@ -38,7 +38,15 @@ include 'connection.php';
                         <li><a href="About.html">About</a></li>
                        <li><button class="btnLogin-popup" id="log_in_id">Login</button></li> 
                     </ul>
-
+                
+<section class="banner"></section>
+<script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var header = document.querySelector("nav");
+      header.classList.toggle("sticky", window.scrollY > 0);
+    });
+  </script>
+  
                 </div>
                 <i class='bx bx-menu-alt-right'onclick="showMenu" ></i>
             </nav>
@@ -173,104 +181,124 @@ include 'connection.php';
        </h1>
 </div>
 
-
+   <!--packages
 <div class="availability">
-<!--packages-->
-<div class="packages">
-
-    <label for="package">Choose your package:</label>
-    <select name="package" id="package">
-     <!-- homepage pages choices--> 
-   <option value="Agoo, La Union">Agoo, La Union</option>
-    <option value="Alaminos">Alaminos, Pangasinan</option>
-    <option value="baguio">Baguio</option>
-    <option value="Bolinao" selected>Bolinao, Pangasinan</option>
-    <option value="Manila">Manila</option>
-    <option value="Sagada">Sagada</option>
-    <option value="San Juan">San Juan, La Union</option>
-    <option value="Vigan">Vigan</option>
+ 
+    <div class="packages">
     
-    </select>
-
-
-</div>
-
-
-<!--DATE LAYOUT-->
-<form>
-    <div class="nativeDatePicker">
-      <label for="Travel">Select Travel Date:</label>
-      <input type="date" id="Travel" name="Travel" />
-      <span class="validity"></span>
+        <label for="package">Choose your package:</label>
+        <select name="package" id="package">
+       
+       <option value="Agoo, La Union">Agoo, La Union</option>
+        <option value="Alaminos">Alaminos, Pangasinan</option>
+        <option value="baguio">Baguio</option>
+        <option value="Bolinao" selected>Bolinao, Pangasinan</option>
+        <option value="Manila">Manila</option>
+        <option value="Sagada">Sagada</option>
+        <option value="San Juan">San Juan, La Union</option>
+        <option value="Vigan">Vigan</option>
+        
+        </select>
+    
+    
     </div>
     
-  </form>
-  <!--QUANTITY TRAVELERS-->
-  <div class="travelers">
-  <form action="/action_page.php">
-    <label for="quantity">Travelers:</label>
-    <input type="number" id="quantity" name="quantity" min="1" max="10">
     
-  </form>
- 
-</div> 
-<div class="button">
-  <button type="submit" form="nameform" value="Submit"> Check Availabilty </button>
-</div> 
+    
+    <form>
+        <div class="nativeDatePicker">
+          <label for="Travel">Select Travel Date:</label>
+          <input type="date" id="Travel" name="Travel" />
+          <span class="validity"></span>
+        </div>
+        
+      </form>
+     
+      <div class="travelers">
+      <form action="/action_page.php">
+        <label for="quantity">Travelers:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10">
+        
+      </form>
+     
+    </div> 
+    <div class="button">
+      <button type="submit" form="nameform" value="Submit"> Check Availabilty </button>
+    </div> 
+-->
+
 </section>
 
 <!--packages-->
 
 <section class="pack"></section>
-<h1>Recommended Packages<a href="packages.html"><p>see more</p></a></div></h1>
+<h1>Recommended Packages</h1>
 
 
+<div class="row-wrap">
+    <img src="IMAGES/back.png" id="backBtn">
 
-<div class="row">
+    <div class="row">
     
-    <div class="pack-col">
-<a href="baguio.html">
-        
-        <img src="IMAGES/baguio.png" alt="baguio">
-        <div class="layers">
-            <h3>Baguio</h3>
+        <div>
+            <span><a href="baguio.html"> <img src="IMAGES/baguio.png" alt="baguio"></span>
+            <span><a href="Alaminos.html"> <img src="IMAGES/alaminos.png" alt="alaminos"></span>
+           
         </div>
-    </div>
-</a>
-        <div class="pack-col">   
-            <a href="alaminos.html">
-        
-                <img src="IMAGES/alaminos.png" alt="alaminos">
-                <div class="layers">         
-    <h3>Alaminos,Pangasinan</h3>
+
+
+        <div>
+              <span><a href="Vigan.html"> <img src="IMAGES/ilocos.png" alt="vigan"></span>
+            <span><a href="Sagada.html"> <img src="IMAGES/sagada.png" alt="sagada"></span>
         </div>
-    </div>
-</a>
-        <div class="pack-col">
-            <a href="Sagada.html">
-        
-                <img src="IMAGES/sagada.png" alt="sagada">
-                <div class="layers">
-        <h3>Sagada</h3>
-        
-    </div>
+
+
+
+        <div>
+          
+            <span><a href="Alaminos.html"> <img src="IMAGES/alaminos.png" alt="alaminos"></span>
+                <span><a href="packages.html"><img src="IMAGES/see_more.png" id="seemore"></span>
+            </a>
+        </div>
+  
 </div>
-</a>
-   
-        <div class="pack-col">
-            <a href="vigan.html"> <img src="IMAGES/vigan.png" alt="sagada">
-                <div class="layers">
-        <h3>Vigan City</h3>
-         
-    </div>
-</div></a>
+     
+     <img src="IMAGES/next.png" id="nextBtn">
+     
 </div>
+<script>
+    let scrollContainer = document.querySelector(".row");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+
+
+
+
+    nextBtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior ="smooth";
+        scrollContainer.scrollLeft += 900;
+
+    });
+
+    
+    backBtn.addEventListener("click", ()=>{
+        scrollContainer.style.scrollBehavior ="smooth";
+
+        scrollContainer.scrollLeft -= 900;
+
+    });
+</script>
 </section>
+
+
+
+
+
 
 
 <section class="activities">
     <h1>Activities you can Enjoy!</h1>
-   <div class="row">
+   <div class="row_act">
 
     <div class="activities-col">
         <a href="adventure.html">
